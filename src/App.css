@@ -40,21 +40,9 @@ h2 {
   align-items: center;
   
 }
+
 .label{
   padding: 100;
 }
 
-th{
-  border-bottom: 1px solid #000814;
-  text-align: center;
-}
-td {
-  border-bottom: 1px solid #000814;
-  text-align: left;
-  font-size: smaller;
-}
-table{
-  justify-content: center;
-  align-items: center;
-  width: 85%;
-}
+

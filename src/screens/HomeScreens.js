@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./../App.css";
 import PostFormLocation from "./PostFormLocation";
-import ShowLocation from "./ShowLocation";
+import Location from "./Location";
 import GetMyLocation from "./GetMyLocation";
 import CheckLocation from "./CheckLocation";
 export default class HomeScreens extends Component {
@@ -15,7 +15,7 @@ export default class HomeScreens extends Component {
           <PostFormLocation />
         </div>
         <div className="centered">
-          <ShowLocation />
+          <Location />
         </div>
         <div className="centered">
           <GetMyLocation />

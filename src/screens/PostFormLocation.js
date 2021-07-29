@@ -3,24 +3,26 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
 import _ from "lodash";
+import { addLocation } from "../actions";
 class PostFormLocation extends Component {
-  add = (event) => {
+  addFormLocation = (event) => {
     event.preventDefault();
     if (this.props.blogsLocation.length < 4) {
       const data = {
         id: Date.now(),
         latitude: event.target.latitude.value,
         longitude: event.target.longitude.value,
+        editing: false,
       };
-      this.props.dispatch({ type: "ADD_LOCATION", data });
+      this.props.addLocation(data);
     } else {
       alert("Sorry, Location can add 4 row.");
     }
   };
   render() {
     return (
-      <div>
-        <form onSubmit={this.add}>
+      <div className="divPost">
+        <form onSubmit={this.addFormLocation}>
           <label style={{ paddingLeft: 20 }}>
             <TextField
               label="Latitude"
@@ -40,8 +42,6 @@ class PostFormLocation extends Component {
               pattern="[+-]?\d+(?:[.,]\d+)?"
               required
             />
-          </label>
-          <label style={{ paddingTop: 20 }}>
             <Button
               size="small"
               variant="contained"
@@ -69,4 +69,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(PostFormLocation);
+export default connect(mapStateToProps, { addLocation })(PostFormLocation);

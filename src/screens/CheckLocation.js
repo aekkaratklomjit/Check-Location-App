@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import {connect} from 'react-redux';
 import _ from 'lodash';
 class CheckLocation extends Component {
-    checklocation=()=>{
+    checkMyLocation=()=>{
         if(this.props.blogsLocation.length==4&&this.props.blogsCurrentLocation.length!==0){
             const SortLatitude=[];
             const SortLongitude=[];
@@ -29,7 +29,7 @@ class CheckLocation extends Component {
     render() {
         return (
             <div>
-                <Button size='small' variant="contained" color="secondary" onClick={()=>this.checklocation()}>Check-Location</Button>
+                <Button size='small' variant="contained" color="secondary" onClick={()=>this.checkMyLocation()}>Check-Location</Button>
             </div>
         )
     }

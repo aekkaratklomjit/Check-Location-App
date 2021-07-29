@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Button from "@material-ui/core/Button";
 import { connect } from "react-redux";
+import {addCurrentLocation} from "../actions"
 import _ from "lodash";
 class GetMyLocation extends Component {
   getLocation = async () => {
@@ -13,10 +14,7 @@ class GetMyLocation extends Component {
       longitude: pos.coords.longitude,
       latitude: pos.coords.latitude,
     };
-    this.props.dispatch({
-      type: "ADD_CURRENT_LOCATION",
-      data,
-    });
+    this.props.addCurrentLocation(data)
   };
   render() {
     return (
@@ -54,4 +52,4 @@ const mapStateToProps = (state) => {
     blogsCurrentLocation,
   };
 };
-export default connect(mapStateToProps)(GetMyLocation);
+export default connect(mapStateToProps,{addCurrentLocation})(GetMyLocation);
