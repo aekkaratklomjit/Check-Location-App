@@ -28,6 +28,7 @@ class CheckLocation extends Component {
         console.log('Test')
         console.log('A')
         console.log('B')
+        console.log('C')
    }
     render() {
         return (
