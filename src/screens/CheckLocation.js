@@ -25,9 +25,6 @@ class CheckLocation extends Component {
            }else{
                alert('Your position is not close to the scope of the company.')}
         }else{alert('Please add location or getLocation')}
-        console.log('1')
-        console.log('2')
-        console.log('3')
    }
     render() {
         return (
