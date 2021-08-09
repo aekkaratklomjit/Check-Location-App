@@ -27,6 +27,7 @@ class CheckLocation extends Component {
         }else{alert('Please add location or getLocation')}
         console.log('Test')
         console.log('A')
+        console.log('B')
    }
     render() {
         return (
